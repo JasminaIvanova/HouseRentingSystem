@@ -4,19 +4,19 @@ pipeline {
     stages {
         stage('Restore') {
             steps {
-                sh 'dotnet restore'
+                bat 'dotnet restore'
             }
         }
 
         stage('Start Application') {
             steps {
-                sh 'dotnet build'
+                bat 'dotnet build'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'dotnet test'
+                bat 'dotnet test'
             }
         }
     }
